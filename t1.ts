@@ -1,11 +1,10 @@
 import { Observable } from 'rxjs/Observable';
 var observable = Observable.create(function (observer) {
-    for (let i=0; i<5; i++) {
-      setTimeout (() => {
-          observer.next(i);
-          console.log('loop: ', i);
-      }, 500);
-    }
+    observer.next(1);
+    observer.next(2);
+    observer.next(3);
+    observer.next(4);
+    observer.next(5);
     observer.complete();
 });
 
